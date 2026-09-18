@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "ENDURANCE – Gemeinsam bis Le Mans",
+  "short_name": "ENDURANCE",
+  "description": "Ein Auto. Drei Fahrer. Dein Weg nach Le Mans. Fahrer- und Managerkarriere als Entscheidungsspiel.",
+  "lang": "de",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#101512",
+  "theme_color": "#101512",
+  "orientation": "any",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}

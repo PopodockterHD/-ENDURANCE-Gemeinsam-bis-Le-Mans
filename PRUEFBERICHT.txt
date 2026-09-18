@@ -1,0 +1,54 @@
+ENDURANCE 1.0.0 — PRÜFBERICHT
+18.09.2026
+
+Automatisierte Logikprüfungen
+----------------------------
+29 Tests für Karriere und Rennsimulation plus 3 Tests für den Offline-Cache.
+Enthalten: gemeinsamer Fahrzeugzustand, Reifen-/Reparaturkosten, autonome
+Teamkollegen, unterschiedliche Fähigkeiten, Fahrzeit über 24 Stunden,
+Schnell-/Standardmodus, Wertungen, deterministisches Speichern/Fortsetzen,
+ungültige Importe, Sponsoren, Fahrerbesetzungen, Budget, Entwicklung,
+Rollenwechsel, Folgeverträge, Ausfälle und plausible Mehrklassen-Kombinationen.
+
+Ein Test durchläuft zusätzlich 5 Klassen x 2 Modi x 3 Saisonen x 6 Rennen:
+180 Rennen, 30 abgeschlossene Saisonen, jeweils mit neuem Vertrag.
+Zufallszustände werden mitgespeichert; wiederholtes Laden liefert bei
+identischen Entscheidungen identische Simulationsfortsetzungen.
+
+Browserprüfung
+--------------
+Chromium: Desktop 1440 x 1000 und Touch-Ansicht 390 x 844.
+Geprüft: neuer Fahrer, Vorbereitung, Rennen, Ergebnis, nächste Runde,
+Wertung während laufendem Rennen ohne Zeitfortschritt, Managerstart,
+alle Hauptansichten, Import einer Le-Mans-Sitzung nach 8 Rennstunden,
+Fortsetzung bis 24 Stunden mit drei aktiven Fahrern, separate Speicherplätze,
+Ablehnung ungültiger Importe ohne Datenverlust und blockierter lokaler
+Speicher mit Sitzungsbetrieb und Export-Warnung.
+Keine JavaScript-Ausnahmen in diesen Testabläufen; keine horizontale
+Überbreite in den geprüften mobilen Ansichten.
+
+Wichtige Testgrenze: Die verwaltete Chromium-Installation dieser Umgebung
+blockiert Datei- und Webnavigation durch eine Administratorrichtlinie.
+Die Tests speisen daher das gebündelte HTML in eine leere Browserseite ein
+und verwenden einen ausgewiesenen Speicheradapter. Darstellung, JavaScript,
+Bedienung und Speichertransaktionen wurden so geprüft, aber eine echte
+file://-Navigation, dauerhafte Browser-Speicherung über einen echten
+Browserneustart, eine reale HTTPS-Veröffentlichung und eine Web-App-
+Installation auf iPhone/Safari wurden hier NICHT verifiziert.
+Die Offline-Cache-Logik wurde separat automatisiert mit Requests/Responses
+und einem Test-Cache geprüft. Das ersetzt keinen Test einer echten
+Service-Worker-Installation im Zielbrowser.
+
+Release-Prüfung
+---------------
+JavaScript-Syntaxprüfung, Neubündelung, Testläufe und ZIP-Integritätsprüfung.
+Visuelle Kontrolle der Desktop- und Mobilansichten. Eigene Codeprüfung;
+kein unabhängiges Sicherheits- oder Regelwerk-Audit.
+
+Grenzen
+-------
+Tests decken die genannten Fälle ab, nicht jede mögliche Eingabekombination.
+Spielbalance und reale Endgerätekompatibilität können nach praktischen
+Spielrunden weiter angepasst werden. Es ist kein öffentlicher Server und
+keine Online-Datenbank eingerichtet. Das ZIP ist ein Bereitstellungspaket,
+kein bereits erreichbarer Internet-Link.

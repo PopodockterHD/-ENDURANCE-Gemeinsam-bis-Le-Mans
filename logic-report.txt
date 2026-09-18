@@ -1,0 +1,202 @@
+TAP version 13
+# Subtest: new driver starts GT4 with real crew, calendar and no race
+ok 1 - new driver starts GT4 with real crew, calendar and no race
+  ---
+  duration_ms: 2.394766
+  type: 'test'
+  ...
+# Subtest: manager can start every supported class
+ok 2 - manager can start every supported class
+  ---
+  duration_ms: 1.803949
+  type: 'test'
+  ...
+# Subtest: creation rejects unsupported roles and classes
+ok 3 - creation rejects unsupported roles and classes
+  ---
+  duration_ms: 0.317109
+  type: 'test'
+  ...
+# Subtest: only one free preparation per weekend
+ok 4 - only one free preparation per weekend
+  ---
+  duration_ms: 0.423379
+  type: 'test'
+  ...
+# Subtest: same seed and actions yield same race
+ok 5 - same seed and actions yield same race
+  ---
+  duration_ms: 7.561258
+  type: 'test'
+  ...
+# Subtest: quick mode has fewer decisions than standard
+ok 6 - quick mode has fewer decisions than standard
+  ---
+  duration_ms: 0.714659
+  type: 'test'
+  ...
+# Subtest: race completes actual requested duration, scores once, updates ledger
+ok 7 - race completes actual requested duration, scores once, updates ledger
+  ---
+  duration_ms: 1.234284
+  type: 'test'
+  ...
+# Subtest: explicit change of driver preserves unrepaired damage and used tyres
+ok 8 - explicit change of driver preserves unrepaired damage and used tyres
+  ---
+  duration_ms: 0.581378
+  type: 'test'
+  ...
+# Subtest: repair and new tyres are physical state changes with time cost
+ok 9 - repair and new tyres are physical state changes with time cost
+  ---
+  duration_ms: 1.274114
+  type: 'test'
+  ...
+# Subtest: 24h endurance uses all three teammates and conserves driving minutes
+ok 10 - 24h endurance uses all three teammates and conserves driving minutes
+  ---
+  duration_ms: 12.037217
+  type: 'test'
+  ...
+# Subtest: invalid race choice does not advance time or mutate state
+ok 11 - invalid race choice does not advance time or mutate state
+  ---
+  duration_ms: 0.6356
+  type: 'test'
+  ...
+# Subtest: new round resets preparation but retains career/history/standings
+ok 12 - new round resets preparation but retains career/history/standings
+  ---
+  duration_ms: 0.718125
+  type: 'test'
+  ...
+# Subtest: full season always yields continuation offer, zero-softlock next season
+ok 13 - full season always yields continuation offer, zero-softlock next season
+  ---
+  duration_ms: 11.590622
+  type: 'test'
+  ...
+# Subtest: serialised in-progress race resumes deterministically
+ok 14 - serialised in-progress race resumes deterministically
+  ---
+  duration_ms: 3.460495
+  type: 'test'
+  ...
+# Subtest: corrupt, oversized and prototype-bearing save imports are rejected
+ok 15 - corrupt, oversized and prototype-bearing save imports are rejected
+  ---
+  duration_ms: 0.988303
+  type: 'test'
+  ...
+# Subtest: race UI lookups are pure and never consume RNG
+ok 16 - race UI lookups are pure and never consume RNG
+  ---
+  duration_ms: 0.763533
+  type: 'test'
+  ...
+# Subtest: driver signing bonus belongs to engine contract transaction
+ok 17 - driver signing bonus belongs to engine contract transaction
+  ---
+  duration_ms: 4.782121
+  type: 'test'
+  ...
+# Subtest: no duplicate team names after changing outfit
+ok 18 - no duplicate team names after changing outfit
+  ---
+  duration_ms: 4.128785
+  type: 'test'
+  ...
+# Subtest: malformed preparation and completed result imports are rejected
+ok 19 - malformed preparation and completed result imports are rejected
+  ---
+  duration_ms: 6.406204
+  type: 'test'
+  ...
+# Subtest: signing a driver is a paid, legal, persistent lineup change
+ok 20 - signing a driver is a paid, legal, persistent lineup change
+  ---
+  duration_ms: 1.18514
+  type: 'test'
+  ...
+# Subtest: illegal LMGT3 lineups leave budget and lineup unchanged
+ok 21 - illegal LMGT3 lineups leave budget and lineup unchanged
+  ---
+  duration_ms: 0.338792
+  type: 'test'
+  ...
+# Subtest: team development changes car capability and charges exact price
+ok 22 - team development changes car capability and charges exact price
+  ---
+  duration_ms: 0.21864
+  type: 'test'
+  ...
+# Subtest: sponsor signing is limited to one per season
+ok 23 - sponsor signing is limited to one per season
+  ---
+  duration_ms: 0.202737
+  type: 'test'
+  ...
+# Subtest: driver-to-manager transition preserves race history
+ok 24 - driver-to-manager transition preserves race history
+  ---
+  duration_ms: 4.505834
+  type: 'test'
+  ...
+# Subtest: teammate skills affect the shared car during their autonomous stint
+ok 25 - teammate skills affect the shared car during their autonomous stint
+  ---
+  duration_ms: 0.70202
+  type: 'test'
+  ...
+# Subtest: pushing consumes more tyres than conserving
+ok 26 - pushing consumes more tyres than conserving
+  ---
+  duration_ms: 0.840549
+  type: 'test'
+  ...
+# Subtest: all classes and speeds run multiple seasons without dead end
+ok 27 - all classes and speeds run multiple seasons without dead end
+  ---
+  duration_ms: 189.929419
+  type: 'test'
+  ...
+# Subtest: DNF classification can be saved and continued without a dead end
+ok 28 - DNF classification can be saved and continued without a dead end
+  ---
+  duration_ms: 2.06597
+  type: 'test'
+  ...
+# Subtest: multiclass entries distinguish Le Mans, prototype rounds and GT-only endurance
+ok 29 - multiclass entries distinguish Le Mans, prototype rounds and GT-only endurance
+  ---
+  duration_ms: 1.464201
+  type: 'test'
+  ...
+# Subtest: PWA install precaches only existing local files; activate preserves other caches
+ok 30 - PWA install precaches only existing local files; activate preserves other caches
+  ---
+  duration_ms: 21.331552
+  type: 'test'
+  ...
+# Subtest: PWA navigation falls back to cached game when offline
+ok 31 - PWA navigation falls back to cached game when offline
+  ---
+  duration_ms: 3.364651
+  type: 'test'
+  ...
+# Subtest: PWA never intercepts unrelated origins or non-GET requests
+ok 32 - PWA never intercepts unrelated origins or non-GET requests
+  ---
+  duration_ms: 0.618905
+  type: 'test'
+  ...
+1..32
+# tests 32
+# suites 0
+# pass 32
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 326.333213

@@ -1,0 +1,12 @@
+{
+  "name": "endurance-career",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline endurance decision game, German driver and manager careers",
+  "scripts": {
+    "build": "node build.cjs",
+    "test": "node --test tests/*.cjs",
+    "test:ui": "python tests/browser_test.py"
+  },
+  "engines": {"node": ">=18"}
+}

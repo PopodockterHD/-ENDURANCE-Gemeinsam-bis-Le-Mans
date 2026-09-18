@@ -1,0 +1,1 @@
+PASS: driver creation, training, race, points navigation, full result, save/reload, manager creation, all panels, Le Mans 24h + import resume, slot copying, corrupt import, blocked storage, mobile layout, injected HTML with storage adapter, no JS errors (managed browser blocks file/http navigation)
